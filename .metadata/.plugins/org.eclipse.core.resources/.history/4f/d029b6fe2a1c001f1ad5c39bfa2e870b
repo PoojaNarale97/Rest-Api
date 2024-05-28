@@ -1,0 +1,19 @@
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.stereotype.Service;
+
+import com.example.SpringAnnotation.entity.Product;
+import com.example.SpringAnnotation.repository.ProductRepository;
+
+
+@Service
+public class ServiceSpring {
+    
+    @Autowired
+    private ProductRepository productRepository; // Correctly injected repository interface
+    
+    public Product saveProduct(Product product) {
+        // Save the product using the repository
+        return productRepository.save(product); // Pass the product to the save method
+    }
+}

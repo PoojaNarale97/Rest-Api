@@ -1,0 +1,22 @@
+package com.example.SpringAnnotation.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.SpringAnnotation.entity.Product;
+
+@Service
+public class ServiceSpring {
+	@Autowired
+	private Repository repo;
+	
+	
+	public Product saveProduct(Product product)
+	{
+		return repo.save()
+	}
+	
+
+}
