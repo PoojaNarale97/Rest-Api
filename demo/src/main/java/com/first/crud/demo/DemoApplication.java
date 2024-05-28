@@ -10,4 +10,9 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
+	public static doTask()
+	{
+		Sytem.out.println("Hello");
+	}
+
 }
